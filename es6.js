@@ -202,3 +202,16 @@ var logger3 = (...rest) => {
 };
 
 logger3(...array6);
+
+
+// JS modules
+
+import {logger8} from './logger/index.js';
+
+import * as constants from './constants.js';
+
+
+console.log(constants);
+logger8('Test message', constants.TYPE_ERROR);
+
+

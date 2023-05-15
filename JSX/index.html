@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- <script crossorigin src="https://unpkg.com/react@17.0.0/umd/react.production.min.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@17.0.0/umd/react-dom.production.min.js"></script>
+    <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script> -->
+    <script src="https://unpkg.com/react@18/umd/react.production.min.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js" crossorigin></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+</head>
+
+<body>
+    <div id="root">
+
+    </div>
+
+    <div id="app">
+
+    </div>
+
+
+    <script type="text/babel">
+
+        const ninhtito = 'Ninh123123';
+        const courses = [
+            {
+                name: 'HTML/CSS'
+            },
+            {
+                name: 'Responsive'
+            },
+            {
+                name: 'ReactJS'
+            }
+        ];
+
+        const ul = <ul className="ninhtito123"> 
+        	<li>JS</li>
+        	<li>ReactJS</li>
+        	<li>{ninhtito}</li>      
+		</ul>
+
+        const ul1 = <ul className="ul-course">
+            {courses.map((course, index) => <li key = {index} > {course.name}</li>)}
+        </ul>
+
+        console.log(ul1);
+
+        ReactDOM.render(ul1, document.body);
+
+        const liPush = () => {
+            var p = []
+            for (var i = 0; i < courses.length; i++) {
+                p.push(<li>{courses[i].name}</li>)
+            }
+            return p
+        }
+        var ul2 = <ul>
+            {liPush()}    
+        </ul>
+
+        var jsx = (
+            <React.Fragment>
+                <h1>Headding</h1>
+                <h2>Heading</h2>
+            </React.Fragment>
+        );
+
+        var jsx1 = React.createElement(
+            React.Fragment,
+            null,
+            React.createElement('h1', null, 'Heading1'),
+            React.createElement('h2', null, 'Heading2'),
+            )
+
+        ReactDOM.render(jsx, document.body);
+    </script>
+
+    <script type="text/babel">
+
+        // function Header() {
+        //     return (
+        //         <div className="header">New Header</div>
+        //     )
+        // }
+
+        // class Content extends React.Component {
+        //     render() {
+        //         return (
+        //             <div className="content">New Content</div>
+        //         )
+        //     }
+
+        // }
+
+        // function app() {
+
+
+        //     return (
+        //         <div className="wrapper">
+        //             <Header/>
+        //             <Content/>
+        //             <div className="footer">Footer</div>
+        //         </div>
+        //     )   
+            
+        
+        // }
+        // console.log(app);
+
+        // postItem.js
+
+        // CourseItem
+        
+        var courses8 = 
+        [
+            {
+                "id": 15,
+                "title": "HTML CSS Pro", // push btvn
+                "slug": "htmlcss",
+                "description": "Từ cơ bản tới chuyên sâu, thực hành 8 dự án, hàng trăm bài tập, trang hỏi đáp riêng, cấp chứng chỉ sau khóa học và mua một lần học mãi mãi.",
+                "image": "courses/15/62f13d2424a47.png", //push btvn
+                "icon": "courses/15/62385d6c63dfa.png", //push btvn
+                "video_type": "upload",
+                "video": null,
+                "old_price": 2499000,
+                "price": 1299000,
+                "pre_order_price": 699000,
+                "students_count": 2208, //push btvn
+                "is_pro": true,
+                "is_coming_soon": false,
+                "is_selling": true,
+                "published_at": "2022-08-18T17:00:00.000000Z",
+                "is_registered": false,
+                "user_progress": 0,
+                "last_completed_at": null,
+                "image_url": "https://files.fullstack.edu.vn/f8-prod/courses/15/62f13d2424a47.png",
+                "icon_url": "https://files.fullstack.edu.vn/f8-prod/courses/15/62385d6c63dfa.png",
+                "video_url": "",
+                "landing_page_url": "/landing/htmlcss",
+                "is_pre_order": false,
+                "is_published": true
+            },
+            {
+                "id": 19,
+                "title": "JavaScript Pro",
+                "slug": "javascript-pro",
+                "description": "Khóa học JavaScript Pro",
+                "image": "courses/19/62f13cb607b4b.png",
+                "icon": "courses/19/62f13cb685c81.png",
+                "video_type": "upload",
+                "video": null,
+                "old_price": 0,
+                "price": 0,
+                "pre_order_price": 0,
+                "students_count": 0,
+                "is_pro": true,
+                "is_coming_soon": true,
+                "is_selling": false,
+                "published_at": "2023-04-30T17:00:00.000000Z",
+                "is_registered": false,
+                "user_progress": 0,
+                "last_completed_at": null,
+                "image_url": "https://files.fullstack.edu.vn/f8-prod/courses/19/62f13cb607b4b.png",
+                "icon_url": "https://files.fullstack.edu.vn/f8-prod/courses/19/62f13cb685c81.png",
+                "video_url": "",
+                "landing_page_url": "/landing/javascript-pro",
+                "is_pre_order": false,
+                "is_published": true
+            },
+            {
+                "id": 20,
+                "title": "ReactJS Pro",
+                "slug": "reactjs-pro",
+                "description": "Khóa học ReactJS Pro",
+                "image": "courses/20/62f13dded314e.png",
+                "icon": "courses/20/62f13ddf5e7f9.png",
+                "video_type": "upload",
+                "video": null,
+                "old_price": 0,
+                "price": 0,
+                "pre_order_price": 0,
+                "students_count": 0,
+                "is_pro": true,
+                "is_coming_soon": true,
+                "is_selling": false,
+                "published_at": "2023-07-31T17:00:00.000000Z",
+                "is_registered": false,
+                "user_progress": 0,
+                "last_completed_at": null,
+                "image_url": "https://files.fullstack.edu.vn/f8-prod/courses/20/62f13dded314e.png",
+                "icon_url": "https://files.fullstack.edu.vn/f8-prod/courses/20/62f13ddf5e7f9.png",
+                "video_url": "",
+                "landing_page_url": "/landing/reactjs-pro",
+                "is_pre_order": false,
+                "is_published": false
+            }
+        ]
+
+        // Transformer (với Dự án lớn)
+
+
+        // UI component 
+        function PostCourse (
+            // id,
+            // title,
+            // description,
+            // image,
+            // studentsCount,
+            course, onClick
+        ) {
+            return (
+                <React.Fragment>
+                    <h1 
+                        className="title">{course.title}
+                        onClick = {() => onClick(course)}
+                    </h1>
+                    <img className="image" src="{course.image}" alt="{course.title}"/>
+                    <h2 className="description">{course.description}</h2>
+                    <p className="studentsCount">{course.students_count}</p>
+                </React.Fragment>
+            )
+        }
+
+        // Container
+        function WrapperCourse() {
+
+
+            // useCallback
+            const handleClick = (course) => {
+                alert(course.title);
+            }
+            return (
+                <div className="wrapper">
+                    {
+                        courses8.map((course) => {
+                            <PostCourse 
+                                key = {course.id}
+                                // image = {course.image}
+                                // title = {course.title}
+                                // description = {course.description}
+                                // studentsCount = {course.students_count}
+                                course = {course}
+                                onClick = {handleClick}
+                            />
+                        })
+                        // <button 
+                        //     onClick={() => console.log(Math.random)}>
+                        //     Click me!
+                        // </button>
+                    }
+                </div>
+
+            )
+        }
+
+        // ReactDOM.render(<WrapperCourse />, document.getElementById('root'));
+        // const rootElement = document.querySelector('#root');
+        // const rootRender = ReactDOM.creareRoot(rootElement);
+        // rootRender.render(<wrapperCourse />);
+
+        function postItem(
+            image,
+            title,
+            description,
+            publishedAt,
+            callback = () => {},
+            ) {
+            return (
+
+                callback(),
+
+                <div className="posts-item">
+                    <label htmlFor="email">Email</label>
+                    <input type="text"/>
+                    <img src={image} 
+                    alt={title} 
+                    />
+                    <h2 className="post-title">{title}</h2>
+                    <p className="post-desc">{description}</p>
+                    <p className="post-published">{publishedAt}</p>
+                </div>
+            )
+        }
+
+        function app() {
+
+            
+            <div className="posts-list">
+                <postItem
+                    title="C#(.NET)"
+                    image="https://th.bing.com/th/id/R.31d946ffa041ac8985332c931b62715d?rik=%2f9KBn9PE%2b%2bR2bA&pid=ImgRaw&r=0"
+                    description="Bạn có kiến thức ngôn ngữ lập trình chưa ?"
+                    publishedAt="Một ngày trước"
+                    callback = {() => {}}
+                />
+                <postItem
+                    title="2C#(.NET)"
+                    image="https://th.bing.com/th/id/R.31d946ffa041ac8985332c931b62715d?rik=%2f9KBn9PE%2b%2bR2bA&pid=ImgRaw&r=0"
+                    description="2Bạn có kiến thức ngôn ngữ lập trình chưa ?"
+                    publishedAt="2Một ngày trước"
+                />
+                <postItem
+                    title="3C#(.NET)"
+                    image="https://th.bing.com/th/id/R.31d946ffa041ac8985332c931b62715d?rik=%2f9KBn9PE%2b%2bR2bA&pid=ImgRaw&r=0"
+                    description="3Bạn có kiến thức ngôn ngữ lập trình chưa ?"
+                    publishedAt="3Một ngày trước"
+                />  
+            </div> 
+        }
+
+        const Form = {
+            Input() {
+                return <input type="text" />
+            },
+            Checkbox() {
+                return <input type="checkbox" />
+            },
+        }
+
+        function Button(title, href, onClick) {
+            let Component = 'button';
+            let props = {};
+          
+            if (href) { 
+                props.href = href;  
+            }
+            
+            if (onClick) {
+                props.onClick = onClick;
+            }
+
+            return (
+                <Component {...props}>{title}</Component>
+            )
+        }
+
+        function App({deluxe, content}) {
+
+            // const type = 'Input';
+
+            // const Component = Form[type];
+
+            let firstAccess = true;
+
+            return (
+                <div className="wrapper">
+                    <Button 
+                        title="Click me!"
+                        href="#"
+                        onClick ={() => console.log(Math.random)}
+                        className="btn-primary"                      
+                    />
+
+                    {
+                        firstAccess && <h1>Welcome to F8</h1>
+                    }
+                    <h2>{deluxe || content}</h2>
+                </div>
+            )
+        }
+
+        function Input({ label, ...inputProps }) {
+            return (
+                <div>
+                    <label>{label}</label>
+                    <input {...inputProps} />    
+                </div>
+            )
+        }
+
+        function Button8({children}) {
+            return <button>{children}</button>
+        }
+
+        function list({data, children}) {
+            return (
+                <ul>
+                   {data.map((item, index) => children(item, index))}
+                </ul>
+            )
+        }
+
+        function App9 () {
+            const car = ['BMW', 'Honda', 'Mazda'];
+            const title = 'Ninhtito';
+            const isPrimary = true;
+            return (
+                <React.Fragment>
+                    <Input 
+                        label="title"
+                        type="text"
+                        placeholder="Enter name"
+                        onFocus={() => {
+                            console.log(Math.random()*10);
+                        }}
+                    />
+
+                    <Button>Click me!</Button>
+                    <List data={car}>
+                        {
+                            (item, index) => <li key={index}>{item}</li>
+                        }
+                    </List>
+
+                </React.Fragment>
+            )
+        }
+ 
+        // index.js
+        const root = document.getElementById('root');
+        ReactDOM.render(<App deluxe="Welcome back"/>, root);
+
+
+        //DOM events
+        function List90(data, children) {
+            return
+            (
+                <ul>
+                {
+                    data.map((item, index) => {item, index})
+                }    
+                </ul>
+            ) 
+        }
+
+        function App90 () {
+            const xuhao = ['Luoc', 'Xao', 'Chien', 'Ran']
+            return (
+                <React.Fragment>
+                    <List90 data={xuhao}>
+                        {
+                            (item, index) => {
+                                <li key={index}>{item}</li>
+                            }
+                        }
+                    </List90>
+                </React.Fragment>
+            )
+        }
+
+
+        const container = document.getElementById('root');
+        ReactDOM.render(<App90/>, container);
+
+    </script>
+</body>
+
+</html>

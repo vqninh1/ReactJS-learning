@@ -5,10 +5,166 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <script crossorigin src="https://unpkg.com/react@17.0.0/umd/react.production.min.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@17.0.0/umd/react-dom.production.min.js"></script> 
+    <!-- <script src="https://unpkg.com/react@18/umd/react.development.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js" crossorigin></script> -->
 </head>
 <body>
-    
+    <!-- 1. document.createElement()
+        2. document.body.appendChild()
+        3. console.dir
+        4. innerText, id, className, style -->
+        
+        
+        
+        <!-- <script type="module" src="es6.js"></script> -->
+        <!-- <script src="logger.js"></script> -->
+        <!-- <script src="constants.js"></script> -->
+        <!-- <script src="react.js"></script> -->
+        <div id="root"></div>
 
-    <script src="es6.js"></script>
+        <script>
+            //    const root = document.getElementById('#root');
+            //    const h1 = document.createElement('h1');
+            
+            //     h1.innerText = 'Ninhtito';
+            //     h1.id = 'heading';
+            //     h1.className = 'heading';
+            // Object.assign(h1, style , {
+                //     color: 'blue',
+        //     backgroundColor: 'Orange',
+        // });
+        
+    //    console.log(h1);
+    //     document.body.appendChild(h1);
+        //root.appendChild(h1);
+
+
+        // DOM
+        const h1 = document.createElement('h1');
+        h1.title = 'hello world';
+        h1.className = 'heading';
+        h1.innerText = 'Ninhtito'
+
+        document.body.appendChild(h1);
+
+        // React -> React DOM
+
+        // React.createElement(type, props, children, n) 
+        const h1React = React.createElement('h2', {
+            title: 'Hello world',
+            className: 'heading',
+        }, 'Hello guys');
+
+        console.dir(h1);
+        console.log(h1React);
+
+        const ulDom = document.createElement('ul');
+        ulDom.id = 'h1234';
+        ulDom.style = 'color: green;';
+
+        const liDom = document.createElement('li');
+        liDom.innerText = 'JS';
+
+        const liDom1 = document.createElement('li');
+        liDom1.innerText = 'Reacjs';
+
+        ulDom.appendChild(liDom);
+        ulDom.appendChild(liDom1);
+
+        document.body.appendChild(ulDom);
+
+        // React
+
+        const ulReact = React.createElement(
+            'ul',
+            {
+                id: 'react123',
+                style : 'color: red'
+            },
+            React.createElement('li', null, 'JS'),
+            React.createElement('li', null, 'Reactjs'),
+        );
+
+        console.log(ulReact);
+
+        const divReact = React.createElement('div', {
+        	className: 'post-item',
+        }, 
+        React.createElement('h2', {
+        	title: 'Hoc React tai F8'
+        }, 'Hoc ReactJS'),
+        React.createElement('p', null, 'Hoc ReactJS tu co ban toi nang cao')
+        )
+        
+        console.log(divReact);
+
+
+        // Chua bai
+        const postItem = React.createElement(
+            'div',
+            {
+                className: 'post-item-1',
+            }, 
+            React.createElement(
+                'h2',
+                {
+                    title: 'Hoc react tai F8',
+                },
+                'Hoc reactJS',
+            ),
+            React.createElement(
+                'p',
+                {},
+                'Hoc ReactJS tu co ban toi nang cao'
+            )
+        )
+
+        const h1React1 = React.createElement(
+            'h1',
+            {
+                title: 'Hello',
+                className: 'heading',
+            },
+            'Hello guys!'
+        )
+
+        const ulReact1 = React.createElement(
+            'ul',
+            {},
+            React.createElement(
+                'li',
+                {},
+                'Javascript'
+            ),
+            React.createElement(
+                'li',
+                {},
+                'ReactJS'
+            )
+        )
+
+        // Get root element
+        const container = document.getElementById('#root');
+
+        // React DOM -> render UI
+        // React @17
+        // ReactDOM.render(postItem, document.body);
+        // ReactDOM.render([h1React1, ulReact1], document.body);
+
+        // ReactDOM version 18
+        // const root = ReactDOM.createRoot(container);
+        // root.render(postItem);
+
+
+        const uL18 = React.createElement('ul', {}, 
+            React.createElement('li', {}, 'JS118'),
+            React.createElement('li', {}, 'ReactJS118'),
+        );
+        
+        ReactDOM.render(uL18, document.body);
+            
+    </script>
 </body>
 </html>
